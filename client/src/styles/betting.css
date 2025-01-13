@@ -1,0 +1,430 @@
+.textColor{
+    color:#146AF5;
+}
+.bgColor{
+    background-color: #146AF5;
+}
+.lg-title{
+    font-size: 57px;
+}
+.md-title{
+    font-size: 24px;
+}
+.sm-title{
+    font-size: 20px;
+}
+.xs-title{
+    font-size: 14px;
+}
+.mb-5{
+    margin-bottom: 5px!important;
+}
+.mb-10{
+    margin-bottom: 10px!important;
+}
+.mb-15{
+    margin-bottom: 15px!important;
+}
+.mb-20{
+    margin-bottom:20px!important;
+}
+.mb-25{
+    margin-bottom:25px!important;
+}
+.mb-30{
+    margin-bottom:30px!important;
+}
+.mb-35{
+    margin-bottom:35px!important;
+}
+.mr-10{
+    margin-right:10px!important;
+}
+button p{
+    margin: 0;
+}
+a{
+    text-decoration:none!important;
+}
+.text-red-color{
+    color:red;
+}
+.text-white-color{
+    color:white!important;
+}
+.text-bet-color{
+    color:#146AF5;
+}
+.bg-white-color{
+    background-color:white!important;
+}
+.bg-bet-color{
+    background-color: #146AF5!important;
+}
+.bg-grey-color{
+    background-color:#313131!important;
+}
+.bg-red-color{
+    background-color:red;
+    color:white;
+}
+.text-bold{
+    font-weight: bold;
+}
+.bg-pink-div{
+    background-color: #F3F4FF;
+    text-align: center;
+    padding: 3px;
+    border-radius: 15px;
+    width:80%;
+    margin:auto;
+    padding-left:10px;
+    padding-right:10px;
+}
+.big-button{
+    max-width:350px;
+    width:48%;
+    height:60px;
+    border-radius:20px!important;
+    color:black!important;
+    font-size:20px!important;
+}
+.bet-width{
+    width:100%;
+    min-width:350px!important;
+}
+.bg-grey-colr{
+    background-color:gray!important;
+}
+.bottom-toggle .css-b7dj7n-MuiList-root{
+    padding:0;
+}
+.betting-container {
+    max-width: 864px;
+    width: 100%;
+   min-height: 780px;
+    margin:auto;
+    position: relative;
+}
+.randing .css-19kzrtu {
+    padding: 8px!important;
+}
+.each-match p{
+    margin-bottom: 0;
+}
+.loading{
+    width:100%;
+    text-align:center;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    background-color: #146AF5;
+    align-content: center;
+    padding-top:220px
+  }
+  .loading img{
+    border-radius: 50%;
+    box-shadow: -5px 5px 20px 10px rgb(59, 59, 59);
+    width:375px;
+    padding:10px;
+  }
+  .login{
+    padding:20px;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    text-align:center;
+    align-content: center;
+    height: 100%;
+  }
+  .login img{
+    width:250px;
+  }
+  .login .bet-width button svg{
+    width:40px;
+    height:40px;
+  }
+  .login .aboutus .bet-width button svg{
+    width:30px!important;
+    height:30px!important;
+    color:white
+  }
+.randing .topbar{
+    width: 100%;
+    height:76px;
+    background-color: #146AF5;
+}
+.topbar header{
+    height:100%;
+    justify-content: center;
+}
+.topbar header .css-1vipebp-MuiButtonBase-root-MuiIconButton-root{
+    padding:4px!important;
+}
+.topbar .css-96uuyl{
+    border-radius: 30px;
+}
+.topbar .css-17zvndv-MuiInputBase-root .MuiInputBase-input {
+    padding: 4px 8px 4px 20px!important;
+}
+.topbar .css-1iz4iln{
+    right:0px;
+}
+.each-match{
+    background: #313131;
+}
+.css-103sfph-MuiList-root{
+    padding: 0;
+}
+.css-cfd5wn-MuiListItem-root{
+    display: block!important;
+}
+.randing .css-19kzrtu{
+    padding: 0!important;
+}
+.css-zfqzub-MuiList-root{
+    padding-right:8px!important;
+    padding-left:5px!important;
+}
+.css-cfd5wn-MuiListItem-root {
+     padding-top: 0px!important; 
+     padding-bottom: 0px!important; 
+     padding-left: 8px!important; 
+     padding-right: 8px!important; 
+}
+.boardMenu button:focus,button:active{
+    background-color: #146AF5;
+    color:white;
+}
+.boardMenu button{
+    color:white;
+    font-size: 14px;
+    padding:10px 12px;
+}
+.betsAccordion .css-jineix-MuiButtonBase-root-MuiAccordionSummary-root{
+    background-color: #146AF5;
+    border-radius: 15px;
+    color:white;
+    margin-bottom: 10px;
+}
+.betsAccordion .css-qr6njo-MuiCollapse-root{
+    background-color: white;
+}
+.betsAccordion .css-7iurs7-MuiAccordionSummary-content.Mui-expanded{
+    margin: 12px 0;
+}
+.betsAccordion .css-jineix-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+     min-height: auto; 
+}
+.betsAccordion .css-1808mag-MuiPaper-root-MuiAccordion-root.Mui-expanded{
+    margin: 0;
+}
+.betsAccordion svg{
+    color:white;
+}
+.top_tab{
+    padding:10px 12px!important;
+    min-height:35px!important;
+    color:white!important;
+    min-width:40px!important;
+}
+.top_tab:focus{
+    color:#03FA4C!important;
+}
+.top_tab .css-1qltlow-MuiTabs-indicator:focus{
+    background-color: #03FA4C!important;
+    color:#03FA4C!important;
+}
+.bet-builder{
+    background-color: white;
+    padding:2px 5px;
+}
+.bet-builder button{
+    padding:4px;
+    border-radius: 30px;
+    font-size: 14px!important;
+    background-color: red;
+
+}
+
+.each-ac-detail{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:13px;
+    padding-top:13px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+}
+.each-ac-detail:hover{
+    background-color: lightgrey;
+    transition: 0.2s;
+    transform: 0.3s;
+}
+.numberBadge{
+    background-color: #146AF5;
+    border-radius: 20px;
+    color:white;
+    width:24px;
+    height: 24px;
+    text-align: center;
+    justify-items: center;
+
+}
+button{
+    text-transform: none!important;
+}
+.matches{
+    margin:auto;
+    background-color: lightgrey;
+    text-align: center;
+    font-size: 27px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.connect-wallet{
+    width:100%;
+    background:#2D2D2D;
+    padding:10px;
+}
+.each-wallet{
+    background:#212121;
+    border-radius:10px;
+    display:inline-block;
+    width:50%;
+    text-align:center;
+    padding:10px;
+    cursor: pointer;
+}
+.connect-wallet .css-1lt5qva-MuiCardContent-root{
+    background: #212121;
+    color:white;
+}
+
+.connect-wallet .css-1i3faf7-MuiPaper-root-MuiCard-root{
+    border-radius: 14px;
+}
+
+.each-wallet:hover{
+    opacity: 0.5;
+}
+.circle{
+    border-radius:20px!important;
+    color:white;
+    font-size: 16px!important;
+    background-color: #146AF5;
+    padding:3px 24px!important;
+    font-weight: bold!important;
+}
+.saller{
+    background:#313131;
+    width:100%;
+    display:flex;
+    font-size:18px;
+    color:white;
+    height:38px;
+    font-weight: bold!important;
+    padding-left:20px;
+    justify-items: center;
+    align-items: center;    
+}
+.each-saller{
+    height:76px;
+    background-color: #212121;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom:10px;
+}
+.wallet-manage{
+    display: flex;
+    justify-content: space-between;
+}
+
+.each-wallet img{
+    width:73px;
+    height:73px;
+    border-radius:50%;
+    border:4px solid white;
+}
+.bestodds{
+    background-color:green;
+    color:white;
+    font-size: 12px;
+    padding-left:20px;
+    padding-right:20px;
+    height:22px;
+    margin-left:-20px;
+}
+.bestadds p{
+    margin:0;
+}
+.gamearea{
+    padding:15px;
+    position: relative;
+}
+.gamearea img{
+    border-radius: 10px;
+}
+.gamearea button{
+    position: absolute;
+    right:15px;
+    bottom:20px;
+    border-radius: 20px 0px 30px 20px;
+    font-size: 14px;
+}
+.badgeavatar h1{
+    margin:0!important;
+}
+
+.casino .gamearea button{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    border-radius: 10px 0px 30px 11px;
+    font-size: 14px;
+    width: 124px;
+    height: 47px;
+}
+
+.casino .gamearea{
+    padding-bottom:0px;
+}
+.css-jhczcq-MuiTabs-root{
+    min-height: 40px!important;
+}
+.small-rate .css-1ckov0h-MuiSvgIcon-root{
+    font-size: 13px!important;
+}
+.imgButton{
+    width:60px;
+    height:60px;
+    text-align: center;
+    background: white;
+    border-radius: 13px;
+    cursor:pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right:10px;
+}
+.imgButton img{
+    width:23px;
+    height:23px;
+}
+.justify-content{
+    display:flex!important;
+    justify-content:space-between!important;
+}
+ 
+
+ @media (min-width: 900px) {
+    .css-1xsbb6x-MuiGrid-root {
+         width: 100%!important; 
+         margin-left:0!important; 
+    }
+}
+
+  
