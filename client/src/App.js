@@ -39,7 +39,7 @@ function App() {
           <Route path="/" exact element={<Loading />}/>
           <Route path="/login" exact element={<Login />}/>
           <Route path="/forgotpassword" exact element={<ForgotPassword />}/>
-          <Route path="/register" exact element={<Loading />}/>
+          <Route path="/register" exact element={<Register />}/>
           <Route path="/aboutus" exact element={<AboutUs />}/>
           <Route path="/contactus" exact element={<ContactUs />}/>
           <Route path="/selectcountry" exact element={<SelectCountry />}/>

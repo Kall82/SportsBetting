@@ -13,7 +13,7 @@ exports.userSignup = async (req, res) =>
 
         if (newUser)
         {
-            res.status(200).json({ message: 'Repeat account.' });
+            res.status(200).json({ message: 'Repeat account' });
         }
         else
         {

@@ -3,28 +3,31 @@ import { Link, NavLink } from "react-router-dom";
 import Stack from '@mui/material/Stack';
 
 
-const footer = {
-  position: "fixed",
-  bottom: "0px",
-  width: "100%",
-  height: "85px",
-  zIndex:'5',
-  backgroundColor: "white",
-  display: "flex",
-  alignItems: 'center',
-  justifyContent: "space-evenly",
-  boxShadow: '0px -4px 20px 0px #00000026'
+const footer =
+{
+  position:         "fixed",
+  bottom:           "0px",
+  width:            "100%",
+  height:           "85px",
+  backgroundColor:  "white",
+  display:          "flex",
+  alignItems:       'center',
+  justifyContent:   "space-evenly",
+  maxWidth:         '864px',
+  boxShadow:        '0px -4px 20px 0px #00000026',
+  zIndex:           '9999'
 };
 
 const FooterIcon = {
-  width: "25px",
-  height: "25px",
+  width:   "25px",
+  height:  "25px",
 };
 
-const FooterItem = ({ isActive }) => ({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
+const FooterItem = ({ isActive }) =>
+({
+  display:        "flex",
+  flexDirection:  "column",
+  alignItems:     "center",
   justifyContent: "center",
   textDecoration: 'none',
   color: isActive
@@ -33,13 +36,13 @@ const FooterItem = ({ isActive }) => ({
 })
 
 const FooterList = {
-  display: "flex",
-  width: "100%",
-  alignItems: "flex-start",
-  justifyContent: "space-evenly",
-  paddingLeft: "0px",
-  marginBottom: "0px",
-  overflow: "hidden",
+  display:          "flex",
+  width:            "100%",
+  alignItems:       "flex-start",
+  justifyContent:   "space-evenly",
+  paddingLeft:      "0px",
+  marginBottom:     "0px",
+  overflow:         "hidden",
 };
 
 const List = [
