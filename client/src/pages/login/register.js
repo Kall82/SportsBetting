@@ -1,28 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import axios from 'axios';
+import { Link }                       from "react-router-dom";
+import axios                          from 'axios';
 
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import GoogleIcon from '@mui/icons-material/Google';
-import Button from '@mui/material/Button';
+import TextField    from '@mui/material/TextField';
+import Typography   from '@mui/material/Typography';
+import IconButton   from '@mui/material/IconButton';
+import GoogleIcon   from '@mui/icons-material/Google';
+import Button       from '@mui/material/Button';
 
 import AvatarUpload from "../../components/buttons/upload";
-import BetButton from "../../components/buttons/main"
 
 let serverUrl = 'http://localhost:5000';
 
 export default function Register() {
-  const [user_email, setUserEmail] = useState('');
-  const [user_name, setUserName] = useState('');
-  const [user_password, setUserPasswod] = useState('');
 
-  const [user_avatar, setUserAvatar] = useState('');
-  const [user_phone, setUserPhone] = useState(null);
+  const [user_email, setUserEmail]        = useState('');
+  const [user_name, setUserName]          = useState('');
+  const [user_password, setUserPasswod]   = useState('');
 
-  //user signup event
-  const addUser = async (event) => {
+  const [user_avatar, setUserAvatar]      = useState('');
+  const [user_phone, setUserPhone]        = useState(null);
+
+  //This is user register event
+  const userRegister = async (event) => 
+  {
     const signupInfo = { user_name, user_password, user_email }
     let response = await axios.post(`${serverUrl}/api/user/signup`, signupInfo);
     console.log('response ===>', response.data)
@@ -46,7 +47,7 @@ export default function Register() {
         <TextField fullWidth label="Mobile" className="mb-20 bet-width" /><br />
         <TextField fullWidth label="Password" className="mb-20 bet-width" value={user_password} onChange={(e) => setUserPasswod(e.target.value)} />
 
-        <Button variant="contained" disableElevation className="bg-bet-color bet-width mb-20 h-[60px] text-[20px]" onClick={addUser}>
+        <Button variant="contained" disableElevation className="bg-bet-color bet-width mb-20 h-[60px] text-[20px]" onClick={userRegister}>
           Register
         </Button>
 

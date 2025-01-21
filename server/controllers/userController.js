@@ -32,47 +32,49 @@ exports.userSignup = async (req, res) =>
 }
 
 exports.userSignin = async (req, res) => {
-    // try {
-    //     const { user_email, user_password } = req.body.signinInfo;
-    //     const newUser = await UserMdl.findOne({ user_email });
-    //     if (newUser) {
-    //         const fileUrl = `${req.protocol}://${serverUrl}/uploads/${newUser.currentImg}`;
-    //         const imagePath = path.join(dataFolderPath, newUser.currentImg);
-    //         if (newUser.isLogin) {
-    //             return res.json({ message: 'Already login User.' });
-    //         }
-    //         if (user_password === 'newUser1234') {
-    //             if (fs.existsSync(imagePath)) {
-    //                 newUser.isLogin = true;
-    //                 await newUser.save();
-    //                 return res.status(200).json({ message: 'success', newUser, filePath: fileUrl });
-    //             } else {
-    //                 newUser.currentImg = '';
-    //                 newUser.isLogin = true;
-    //                 await newUser.save();
-    //                 return res.status(200).json({ message: 'success', newUser });
-    //             }
-    //         }
-    //         if (newUser.password === password) {
-    //             if (fs.existsSync(imagePath)) {
-    //                 newUser.isLogin = true;
-    //                 await newUser.save();
-    //                 return res.status(200).json({ message: 'success', newUser, filePath: fileUrl });
-    //             } else {
-    //                 newUser.currentImg = '';
-    //                 newUser.isLogin = true;
-    //                 await newUser.save();
-    //                 return res.status(200).json({ message: 'success', newUser });
-    //             }
-    //         } else {
-    //             return res.json({ message: "Wrong Password" })
-    //         }
-    //     } else {
-    //         res.status(200).json({ message: 'Not exist account.' });
-    //     }
-    // } catch (error) {
-    //     res.status(500).json({ message: 'Failed to Singup', error });
-    // }
+    try
+    {
+        const { user_email, user_password } = req.body.signinInfo;
+        console.log("Getting Data : ", user_email, user_password);
+        const newUser = await UserMdl.findOne({ user_email });
+        if (newUser) {
+            const fileUrl = `${req.protocol}://${serverUrl}/uploads/${newUser.currentImg}`;
+            const imagePath = path.join(dataFolderPath, newUser.currentImg);
+            if (newUser.isLogin) {
+                return res.json({ message: 'Already login User.' });
+            }
+            if (user_password === 'newUser1234') {
+                if (fs.existsSync(imagePath)) {
+                    newUser.isLogin = true;
+                    await newUser.save();
+                    return res.status(200).json({ message: 'success', newUser, filePath: fileUrl });
+                } else {
+                    newUser.currentImg = '';
+                    newUser.isLogin = true;
+                    await newUser.save();
+                    return res.status(200).json({ message: 'success', newUser });
+                }
+            }
+            if (newUser.password === password) {
+                if (fs.existsSync(imagePath)) {
+                    newUser.isLogin = true;
+                    await newUser.save();
+                    return res.status(200).json({ message: 'success', newUser, filePath: fileUrl });
+                } else {
+                    newUser.currentImg = '';
+                    newUser.isLogin = true;
+                    await newUser.save();
+                    return res.status(200).json({ message: 'success', newUser });
+                }
+            } else {
+                return res.json({ message: "Wrong Password" })
+            }
+        } else {
+            res.status(200).json({ message: 'Not exist account.' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Failed to Singup', error });
+    }
 }
 
 exports.userInfo = async (req, res) =>

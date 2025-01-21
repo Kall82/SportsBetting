@@ -1,24 +1,37 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link }                       from "react-router-dom";
+import axios                          from 'axios';
 
-import TextField from '@mui/material/TextField';
+import TextField        from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import Checkbox         from '@mui/material/Checkbox';
+import Typography       from '@mui/material/Typography';
+import Button           from '@mui/material/Button';
+import IconButton       from '@mui/material/IconButton';
+import GoogleIcon       from '@mui/icons-material/Google';
 
-import IconButton from '@mui/material/IconButton';
-import GoogleIcon from '@mui/icons-material/Google';
+
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 
-import axios from 'axios';
+let serverUrl = 'http://localhost:5000';
+
 
 export default function Login() {
 
-  const [user, setUser] = useState([]);
-  const [profile, setProfile] = useState([]);
+  const [user, setUser]                  = useState([]);
+  const [profile, setProfile]            = useState([]);
+  const [user_email, setUserEmail]       = useState('');
+  const [user_password, setUserPassword] = useState('');
+  const [state, setState]                = useState({gilad: true, jason: false, antoine: false});
+  const [signInfo, setSignInfo]          = useState({ email: '', password: ''}); 
 
-  const login = useGoogleLogin({
+  let res = '';
+
+  const { gilad, jason, antoine } = state;
+
+  //This is google login event
+  const login = useGoogleLogin
+  ({
     onSuccess: (codeResponse) => setUser(codeResponse),
     onError: (error) => console.log('Login Failed:', error)
   });
@@ -42,32 +55,34 @@ export default function Login() {
     [user]
   );
 
-  // log out function to log the user out of google and set the profile array to null
-  const logOut = async () => {
-    // let response = await axios.post(`${serverUrl}/api/user/signup`), ))
-    // googleLogout();
-    setProfile(null);
-  };
-
-  const [state, setState] = React.useState({
-    gilad: true,
-    jason: false,
-    antoine: false,
-  });
-
-  const [signInfo, setSignIfo] = React.useState({
-    email: '',
-    password: ''
-  })
-
-  const handleChange = (event) => {
+  //This is google handle event
+  const handleChange = (event) =>
+  {
     setState({
       ...state,
       [event.target.name]: event.target.checked,
     });
   };
 
-  const { gilad, jason, antoine } = state;
+  //This is user login event
+  const userLogin = async (event) =>
+  {
+    const signinInfo = {user_email, user_password}
+    res = await axios.post(`${serverUrl}/api/user/signin`, signinInfo);
+    console.log("login response ===> ", res.data);
+    alert(res.data.message);
+  }
+
+  //This is user logout event
+  const logOut = async () => 
+  {
+    setProfile(null);
+    res = await axios.post(`${serverUrl}/api/user/`);
+    googleLogout();
+  }
+
+
+
 
   return (
     <div className="login">
@@ -76,10 +91,10 @@ export default function Login() {
         <h3 className="md-title">Sign In</h3>
         <p>welcome back</p>
       </div>
-      
+
       <div className="bet-width mb-35">
-        <TextField fullWidth label="Email Address" className="mb-20 bet-width" /><br />
-        <TextField fullWidth label="Password" className="mb-20 bet-width" />
+        <TextField fullWidth label="Email Address" className="mb-20 bet-width" value={user_email} onChange={(e) => setUserEmail(e.target.value)} /><br />
+        <TextField fullWidth label="Password" className="mb-20 bet-width" value={user_password} onChange={(e) => setUserPassword(e.target.value)} />
         <div style={{ display: "flex", justifyContent: "space-between" }} className='mb-20 bet-width'>
           <FormControlLabel
             control={
@@ -91,9 +106,11 @@ export default function Login() {
 
           <Link to=""><Typography component="legend" className="text-red-color sm-title">Forgot a password?</Typography></Link>
         </div>
-        <Button variant="contained" disableElevation className="bg-bet-color bet-width mb-20" style={{ height: "60px", borderRadius: "15px", fontSize: "20px" }}>
+
+        <Button variant="contained" disableElevation className="bg-bet-color bet-width mb-20 h-[60px]" style={{ height: "60px", borderRadius: "15px", fontSize: "20px" }} onClick={userLogin}>
           Login
         </Button>
+        
         <hr />
         <div className="bet-width mb-30" style={{ textAlign: "center" }}>
 
