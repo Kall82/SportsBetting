@@ -8,7 +8,7 @@ exports.userSignup = async (req, res) =>
     try
     {
         const { user_name, user_email, user_phone, user_password } = req.body;
-        console.log("username====>",user_name);
+        console.log("username====>",req.body);
         let newUser = await UserMdl.findOne({ user_email });
 
         if (newUser)
@@ -21,7 +21,7 @@ exports.userSignup = async (req, res) =>
             await newUser.save();
             
             res.status(200).json({
-                message: 'Signup successfully',
+                message: 'SignUp success!',
             });
         }
     }

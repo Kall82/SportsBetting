@@ -4,37 +4,44 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import logo from './logo.svg';
 import './App.css';
 //These are pages
-import Randing from "./pages/randing";
-import Bets from "./pages/bets";
+import Bets                 from "./pages/bets";
 import BetEachFootballMatch from "./pages/bets/each-football";
-import BetEachVirtualGame from "./pages/bets/each-virtualgame";
-import Login from "./pages/login";
-import ForgotPassword from "./pages/login/forgotPassword";
-import Register from "./pages/login/register";
-import Verify from "./pages/login/verify";
-import Loading from "./pages/loading";
-import InstantVirtual from "./pages/bets/instantVirtual";
-import Casino from "./pages/bets/casino";
-import SelectCountry from "./pages/login/selectCountry";
-import AboutUs from "./pages/system/aboutus";
-import ContactUs from "./pages/system/contactus";
-import Policy from "./pages/system/policy";
-import Service from "./pages/system/service";
-import Help from "./pages/system/help";
-import Faq from "./pages/system/faq";
-import UserProfile from "./pages/system/userProfile";
-import ConnectWallet from "./pages/system/connectWallet";
-import MarketPlace from "./pages/nftMarketPlace/marketPlace";
+import InstantVirtual       from "./pages/bets/instantVirtual";
+import BetEachVirtualGame   from "./pages/bets/each-virtualgame";
+import Casino               from "./pages/bets/casino";
+
+import AboutUs              from "./pages/system/aboutus";
+import ContactUs            from "./pages/system/contactus";
+import Policy               from "./pages/system/policy";
+import Service              from "./pages/system/service";
+import Help                 from "./pages/system/help";
+import Faq                  from "./pages/system/faq";
+import UserProfile          from "./pages/system/userProfile";
+import ConnectWallet        from "./pages/system/connectWallet";
+
+import Login                from "./pages/login";
+import ForgotPassword       from "./pages/login/forgotPassword";
+import Register             from "./pages/login/register";
+import Verify               from "./pages/login/verify";
+import SelectCountry        from "./pages/login/selectCountry";
+
+import Loading              from "./pages/loading";
+import Randing              from "./pages/randing";
+
+import MarketPlace          from "./pages/nftMarketPlace/marketPlace";
 //These are components
-import Header from "./components/layouts/header";
-import Footer from "./components/layouts/footer";
+import Header               from "./components/layouts/header";
+import Footer               from "./components/layouts/footer";
 
 function App() {
+
   return (
+
     <GoogleOAuthProvider clientId="randycarrorll@gmail.com">
       <Router>
-      <div className="betting-container">
+      <div className="betting-container pb-100">
       <Header />
+      
       <Routes>
           <Route path="/" exact element={<Loading />}/>
           <Route path="/login" exact element={<Login />}/>
@@ -52,9 +59,11 @@ function App() {
           <Route path="/casino" element={<Casino />} />
           <Route path="/randing" element={<Randing />} />
         </Routes>
+
       </div>
       </Router>
     </GoogleOAuthProvider>
+    
      );
 }
 

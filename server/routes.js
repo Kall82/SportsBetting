@@ -13,5 +13,4 @@ router.get('/api/user/getinfo',    userController.userInfo);
 router.post('/api/user/logout',    userController.userLogout);
 
 
-
 module.exports = router;
