@@ -2,6 +2,7 @@ import React from  'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import logo from './logo.svg';
+
 import './App.css';
 //These are pages
 import Bets                 from "./pages/bets";
@@ -18,6 +19,7 @@ import Help                 from "./pages/system/help";
 import Faq                  from "./pages/system/faq";
 import UserProfile          from "./pages/system/userProfile";
 import ConnectWallet        from "./pages/system/connectWallet";
+import Wallet               from "./pages/system/wallet";
 
 import Login                from "./pages/login";
 import ForgotPassword       from "./pages/login/forgotPassword";
@@ -29,6 +31,7 @@ import Loading              from "./pages/loading";
 import Randing              from "./pages/randing";
 
 import MarketPlace          from "./pages/nftMarketPlace/marketPlace";
+import ReferralHome         from "./pages/referral/home";
 //These are components
 import Header               from "./components/layouts/header";
 import Footer               from "./components/layouts/footer";
@@ -43,21 +46,24 @@ function App() {
       <Header />
       
       <Routes>
-          <Route path="/" exact element={<Loading />}/>
-          <Route path="/login" exact element={<Login />}/>
-          <Route path="/forgotpassword" exact element={<ForgotPassword />}/>
-          <Route path="/register" exact element={<Register />}/>
-          <Route path="/aboutus" exact element={<AboutUs />}/>
-          <Route path="/contactus" exact element={<ContactUs />}/>
-          <Route path="/selectcountry" exact element={<SelectCountry />}/>
-          <Route path="/instantvirtual" element={<InstantVirtual />} />
-          <Route path="/policy" element={<Policy />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/help" element={<Help />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/userprofile" element={<UserProfile />} />
-          <Route path="/casino" element={<Casino />} />
-          <Route path="/randing" element={<Randing />} />
+          <Route path="/"                 exact element={<Loading />}/>
+          <Route path="/login"            exact element={<Login />}/>
+          <Route path="/forgotpassword"   exact element={<ForgotPassword />}/>
+          <Route path="/register"         exact element={<Register />}/>
+          <Route path="/aboutus"          exact element={<AboutUs />}/>
+          <Route path="/contactus"        exact element={<ContactUs />}/>
+          <Route path="/selectcountry"    exact element={<SelectCountry />}/>
+          <Route path="/instantvirtual"   exact element={<InstantVirtual />} />
+          <Route path="/policy"           exact element={<Policy />} />
+          <Route path="/service"          exact element={<Service />} />
+          <Route path="/help"             exact element={<Help />} />
+          <Route path="/faq"              exact element={<Faq />} />
+          <Route path="/userprofile"      exact element={<UserProfile />} />
+          <Route path="/casino"           exact element={<Casino />} />
+          <Route path="/randing"          exact element={<Randing />} />
+          <Route path="/wallet"           exact element={<Wallet />} />
+
+          <Route path="/betfuz/referral"  exact element={<ReferralHome />} />
         </Routes>
 
       </div>

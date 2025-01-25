@@ -125,7 +125,7 @@ export default function Login() {
           {profile ? (
             <IconButton
               size="large"
-              aria-label="show more" a
+              aria-label="show more"
               aria-haspopup="true"
               style={{ background: "red", color: "white", padding: "15px", width: "70px", height: "70px" }}
               onClick={logOut}
@@ -135,7 +135,7 @@ export default function Login() {
           ) : (
             <IconButton
               size="large"
-              aria-label="show more" a
+              aria-label="show more"
               aria-haspopup="true"
               style={{ background: "red", color: "white", padding: "15px", width: "70px", height: "70px" }}
               onClick={login}
@@ -145,7 +145,7 @@ export default function Login() {
           )}
 
         </div>
-        <Typography component="legend"> Do you have an account ? <Link to="" className="text-red-color">Register</Link></Typography>
+        <Typography component="legend"> Do you have an account ? <Link to="/register" className="text-red-color">Register</Link></Typography>
 
       </div>
     </div>

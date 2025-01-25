@@ -47,7 +47,7 @@ export default function Register() {
         <TextField fullWidth label="Mobile" className="mb-20 bet-width" /><br />
         <TextField fullWidth label="Password" className="mb-20 bet-width" value={user_password} onChange={(e) => setUserPasswod(e.target.value)} />
 
-        <Button variant="contained" disableElevation className="bg-bet-color bet-width mb-20 h-[60px] text-[20px]" onClick={userRegister}>
+        <Button variant="contained" disableElevation className="bg-bet-color bet-width mb-20 h-[60px]" style={{ height: "60px", borderRadius: "15px", fontSize: "20px" }} onClick={userRegister}>
           Register
         </Button>
 

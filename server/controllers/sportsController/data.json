@@ -1,0 +1,140 @@
+{
+	fixture: {
+	id: 867946,,
+	referee: "A. Taylor",
+	timezone: "UTC",
+	date: "2022-08-05T19:00:00+00:00",
+	timestamp: 1659726000,
+	periods: {,
+	first: 1659726000,
+	second: 1659729600,
+	},
+	venue: {
+	id: 525,
+	name: "Selhurst Park",
+	city: "London",
+	},
+	status: {,
+	long: "Match Finished",
+	short: "FT",
+	elapsed: 90,
+	extra: null,
+	},
+	}
+	league: {
+	id: 39
+	name: "Premier League"
+	country: "England"
+	logo: "https://media.api-sports.io/football/leagues/39.png"
+	flag: "https://media.api-sports.io/flags/gb-eng.svg"
+	season: 2022
+	round: "Regular Season - 1"
+	standings: true
+	}
+	teams: {
+	home: {
+	id: 52
+	name: "Crystal Palace"
+	logo: "https://media.api-sports.io/football/teams/52.png"
+	winner: false
+	}
+	away: {
+	id: 42
+	name: "Arsenal"
+	logo: "https://media.api-sports.io/football/teams/42.png"
+	winner: true
+	}
+	}
+	goals: {
+	home: 0
+	away: 2
+	}
+	score: {
+	halftime: {
+	home: 0
+	away: 1
+	}
+	fulltime: {
+	home: 0
+	away: 2
+	}
+	extratime: {
+	home: null
+	away: null
+	}
+	penalty: {
+	home: null
+	away: null
+	}
+	}
+	}
+	{
+	fixture: {
+	id: 867947
+	referee: "A. Madley"
+	timezone: "UTC"
+	date: "2022-08-06T11:30:00+00:00"
+	timestamp: 1659785400
+	periods: {
+	first: 1659785400
+	second: 1659789000
+	}
+	venue: {
+	id: 535
+	name: "Craven Cottage"
+	city: "London"
+	}
+	status: {
+	long: "Match Finished"
+	short: "FT"
+	elapsed: 90
+	extra: null
+	}
+	}
+	league: {
+	id: 39
+	name: "Premier League"
+	country: "England"
+	logo: "https://media.api-sports.io/football/leagues/39.png"
+	flag: "https://media.api-sports.io/flags/gb-eng.svg"
+	season: 2022
+	round: "Regular Season - 1"
+	standings: true
+	}
+	teams: {
+	home: {
+	id: 36
+	name: "Fulham"
+	logo: "https://media.api-sports.io/football/teams/36.png"
+	winner: null
+	}
+	away: {
+	id: 40
+	name: "Liverpool"
+	logo: "https://media.api-sports.io/football/teams/40.png"
+	winner: null
+	}
+	}
+	goals: {
+	home: 2
+	away: 2
+	}
+	score: {
+	halftime: {
+	home: 1
+	away: 0
+	}
+	fulltime: {
+	home: 2
+	away: 2
+	}
+	extratime: {
+	home: null
+	away: null
+	}
+	penalty: {
+	home: null
+	away: null
+	}
+	}
+}

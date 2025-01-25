@@ -11,7 +11,7 @@ export default function UserProfle() {
         <>
         <Topbar />
          <img src={imgBannerLive} style={{width:"100%"}} />
-         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} style={{textAlign:"center",paddingBottom:"8px",height:"90px",background:"#313131"}}>
+         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} style={{textAlign:"center",paddingBottom:"8px",height:"90px",background:"#212121"}}>
           <Grid item xs={6} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
             <BadgeAvatar />
           </Grid>
@@ -19,8 +19,8 @@ export default function UserProfle() {
             <p style={{fontSize:"16px",float:"right"}} className="text-white-color">Total Balance</p>
           </Grid>
           </Grid>
-            <div className="login faq">
-              <div className="bet-width mb-35" style={{textAlign:"left"}}>
+            <div className="login faq" style={{padding:"0px"}}>
+              <div className="bet-width mb-35 userprofile" style={{textAlign:"left"}}>
                 <Collaps />
               </div>
             </div>

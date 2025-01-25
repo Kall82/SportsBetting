@@ -1,8 +1,9 @@
 const fs        = require('fs');
 const path      = require('path');
 const jwt       = require('jsonwebtoken');
-const UserMdl   = require('../models/User');
+const UserMdl   = require('../models/UserModel');
 
+//This is user signup event
 exports.userSignup = async (req, res) =>
 {
     try
@@ -31,20 +32,32 @@ exports.userSignup = async (req, res) =>
     }
 }
 
-exports.userSignin = async (req, res) => {
+
+//This is user sigin event
+exports.userSignin = async (req, res) =>
+{
     try
     {
-        const { user_email, user_password } = req.body.signinInfo;
-        console.log("Getting Data : ", user_email, user_password);
-        const newUser = await UserMdl.findOne({ user_email });
-        if (newUser) {
-            const fileUrl = `${req.protocol}://${serverUrl}/uploads/${newUser.currentImg}`;
-            const imagePath = path.join(dataFolderPath, newUser.currentImg);
-            if (newUser.isLogin) {
+        const { user_email, user_password } = req.body;
+
+        const newUser       = await UserMdl.findOne({ user_email });
+
+        const fileUrl       = ``;
+        const imagePath     = ``;
+
+        if (newUser)
+        {
+            fileUrl     = `${req.protocol}://${serverUrl}/uploads/${newUser.currentImg}`;
+            imagePath   = path.join(dataFolderPath, newUser.currentImg);
+
+            if (newUser.isLogin)
+            {
                 return res.json({ message: 'Already login User.' });
             }
-            if (user_password === 'newUser1234') {
-                if (fs.existsSync(imagePath)) {
+            if (newUser.password === password)
+            {
+                if (fs.existsSync(imagePath))
+                {
                     newUser.isLogin = true;
                     await newUser.save();
                     return res.status(200).json({ message: 'success', newUser, filePath: fileUrl });
@@ -54,36 +67,28 @@ exports.userSignin = async (req, res) => {
                     await newUser.save();
                     return res.status(200).json({ message: 'success', newUser });
                 }
-            }
-            if (newUser.password === password) {
-                if (fs.existsSync(imagePath)) {
-                    newUser.isLogin = true;
-                    await newUser.save();
-                    return res.status(200).json({ message: 'success', newUser, filePath: fileUrl });
-                } else {
-                    newUser.currentImg = '';
-                    newUser.isLogin = true;
-                    await newUser.save();
-                    return res.status(200).json({ message: 'success', newUser });
-                }
-            } else {
+            } else 
+            {
                 return res.json({ message: "Wrong Password" })
             }
-        } else {
+        } else
+        {
             res.status(200).json({ message: 'Not exist account.' });
         }
-    } catch (error) {
+    } catch (error)
+    {
         res.status(500).json({ message: 'Failed to Singup', error });
     }
 }
 
+//This is userInfo event
 exports.userInfo = async (req, res) =>
 {
     const newUser = await UserMdl.find();
     return res.json({ newUser })
 }
 
-
+//This is userLogout event
 exports.userLogout = async (req, res) =>
 {
     const { who } = req.body;
@@ -108,3 +113,4 @@ exports.userLogout = async (req, res) =>
 //         return res.json({ message: 'success', admin: user, filePath: fileUrl });
 //     }
 // }
+

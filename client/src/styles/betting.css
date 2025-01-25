@@ -40,6 +40,18 @@
 .mr-10{
     margin-right:10px!important;
 }
+.w-full{
+    width:100%!important;
+}
+.h-full{
+    height:100%;
+}
+.w-[80]{
+    width:80%;
+}
+.text-center{
+    text-align: center;
+}
 button p{
     margin: 0;
 }
@@ -51,6 +63,12 @@ a{
 }
 .text-white-color{
     color:white!important;
+}
+.text-orange-color{
+    color:#F3C11B;
+}
+.bg-orange-color{
+    background-color:#F3C11B;
 }
 .text-bet-color{
     color:#146AF5;
@@ -418,6 +436,29 @@ button{
     display:flex!important;
     justify-content:space-between!important;
 }
+.userprofile .css-1808mag-MuiPaper-root-MuiAccordion-root{
+    background-color:transparent; 
+    color:white;
+ }
+ .userprofile{
+    background-color:#2D2D2D;
+ }
+ .wallet-card{
+    width:100%;
+    min-height:200px;
+    background-image:url('../assets/imgs/wallet-bg.png');
+    background-size:cover;
+    border-radius:20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    color:white;
+ }
+ .myContainer{
+    padding:30px;
+ }
  
 
  @media (min-width: 900px) {
