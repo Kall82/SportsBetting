@@ -32,6 +32,7 @@ import Randing              from "./pages/randing";
 
 import MarketPlace          from "./pages/nftMarketPlace/marketPlace";
 import ReferralHome         from "./pages/referral/home";
+import FriendsList          from "./pages/referral/friendslist";
 //These are components
 import Header               from "./components/layouts/header";
 import Footer               from "./components/layouts/footer";
@@ -62,6 +63,7 @@ function App() {
           <Route path="/casino"           exact element={<Casino />} />
           <Route path="/randing"          exact element={<Randing />} />
           <Route path="/wallet"           exact element={<Wallet />} />
+          <Route path="/yourfriends"      exact element={<FriendsList />} />
 
           <Route path="/betfuz/referral"  exact element={<ReferralHome />} />
         </Routes>

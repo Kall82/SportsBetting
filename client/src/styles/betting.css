@@ -14,7 +14,7 @@
     font-size: 20px;
 }
 .xs-title{
-    font-size: 14px;
+    font-size: 16px;
 }
 .mb-5{
     margin-bottom: 5px!important;
@@ -41,16 +41,30 @@
     margin-right:10px!important;
 }
 .w-full{
-    width:100%!important;
+/*    width:100%!important;*/
 }
 .h-full{
     height:100%;
 }
-.w-[80]{
-    width:80%;
+.dark-board{
+    background-color:#212121;
+}
+.back-section a{
+    display: inline;
+}
+.back-section img{
+    display: inline;
 }
 .text-center{
     text-align: center;
+}
+.referralhome button{
+    max-width:500px;
+    height:60px;
+    color:black;
+}
+.refferralhome img{
+    max-width:500px;
 }
 button p{
     margin: 0;
@@ -68,7 +82,7 @@ a{
     color:#F3C11B;
 }
 .bg-orange-color{
-    background-color:#F3C11B;
+    background-color:#F3C11B!important;
 }
 .text-bet-color{
     color:#146AF5;
