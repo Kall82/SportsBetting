@@ -33,6 +33,7 @@ import Randing              from "./pages/randing";
 import MarketPlace          from "./pages/nftMarketPlace/marketPlace";
 import ReferralHome         from "./pages/referral/home";
 import FriendsList          from "./pages/referral/friendslist";
+
 //These are components
 import Header               from "./components/layouts/header";
 import Footer               from "./components/layouts/footer";
@@ -47,13 +48,13 @@ function App() {
       <Header />
       
       <Routes>
-          <Route path="/"                 exact element={<Loading />}/>
-          <Route path="/login"            exact element={<Login />}/>
+          <Route path="/"                 exact element={<Loading />} />
+          <Route path="/login"            exact element={<Login />} />
           <Route path="/forgotpassword"   exact element={<ForgotPassword />}/>
-          <Route path="/register"         exact element={<Register />}/>
-          <Route path="/aboutus"          exact element={<AboutUs />}/>
-          <Route path="/contactus"        exact element={<ContactUs />}/>
-          <Route path="/selectcountry"    exact element={<SelectCountry />}/>
+          <Route path="/register"         exact element={<Register />} />
+          <Route path="/aboutus"          exact element={<AboutUs />} />
+          <Route path="/contactus"        exact element={<ContactUs />} />
+          <Route path="/selectcountry"    exact element={<SelectCountry />} />
           <Route path="/instantvirtual"   exact element={<InstantVirtual />} />
           <Route path="/policy"           exact element={<Policy />} />
           <Route path="/service"          exact element={<Service />} />
@@ -66,6 +67,7 @@ function App() {
           <Route path="/yourfriends"      exact element={<FriendsList />} />
 
           <Route path="/betfuz/referral"  exact element={<ReferralHome />} />
+          <Route path="/betfuz/home"      exact element={<Randing />} />
         </Routes>
 
       </div>

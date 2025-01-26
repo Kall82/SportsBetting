@@ -125,7 +125,7 @@ a{
     width:100%;
     min-width:350px!important;
 }
-.bg-grey-colr{
+.bg-grey-color{
     background-color:gray!important;
 }
 .bottom-toggle .css-b7dj7n-MuiList-root{
@@ -149,10 +149,11 @@ a{
     text-align:center;
     align-items: center;
     justify-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #146AF5;
     align-content: center;
-    padding-top:220px
+    display:flex;
+    height:100vh;    
   }
   .loading img{
     border-radius: 50%;
